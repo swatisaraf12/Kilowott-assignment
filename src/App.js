@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Users from "./components/Users";
+import Card from "./UI/Card";
+import BasicTable from "./components/BasicTable";
+import Data from "./components/Data";
+const DUMMY_USERS = [
+  {
+    id: "1",
+    name: "Leanne Graham",
+    username: "Bret",
+  },
+  {
+    id: "2",
+    name: "Ervin Howell",
+    username: "Antonette",
+  },
+  {
+    id: "3",
+    name: "Clementine Bauch",
+    username: "Samantha",
+  },
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <Card>
+        <BasicTable />
+        <Data />
+      </Card>
+    </section>
   );
 }
 
